@@ -28,3 +28,10 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 CDS Commands:
 Run the below command after the wizard creating the project for CAP
 cds add hana --> to add db info in mta file
+
+## Excesice of the tutorial
+https://developers.sap.com/tutorials/hana-cloud-cap-create-database-cds.html
+
+get header and items data
+
+https://github.com/SAP-samples/hana-opensap-cloud-2020

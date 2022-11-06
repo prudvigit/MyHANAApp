@@ -7,14 +7,20 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^6",
+    "@sap/xssec": "^3",
     "express": "^4",
-    "hdb": "^0.19.0"
+    "hdb": "^0.19.0",
+    "passport": "^0"
   },
   "devDependencies": {
+    "@sap/ux-specification": "^1.102.11",
     "sqlite3": "^5.0.4"
   },
   "scripts": {
-    "start": "cds run"
+    "start": "cds run",
+    "deploy": "cds deploy --to hana:MyHANAApp-dev",
+    "app": "npm start --prefix app",
+    "watch-interaction_items": "cds watch --open interaction_items/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "engines": {
     "node": "^16.15"
@@ -45,8 +51,8 @@
     }
   },
   "cds": {
-    "build":{
-      "tasks":[
+    "build": {
+      "tasks": [
         {
           "for": "hana",
           "dest": "../db"
@@ -55,11 +61,17 @@
           "for": "node-cf"
         }
       ]
-    }, 
+    },
     "requires": {
       "db": {
-        "kind": "hana-cloud"
+        "kind": "hana"
+      },
+      "uaa": {
+        "kind": "xsuaa"
       }
     }
-  }
+  },
+  "sapux": [
+    "app/interaction_items"
+  ]
 }

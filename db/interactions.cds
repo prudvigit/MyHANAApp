@@ -25,6 +25,9 @@ context app.interactions {
         LOGTEXT   : LText;
   };
 
+
+}
+
   @cds.persistence.exists
   @cds.persistence.calcview
   entity![V_INTERACTION]{
@@ -34,5 +37,4 @@ context app.interactions {
        ![BPCOUNTRY_CODE] : String(3)    @title : 'BPCOUNTRY_CODE: BPCOUNTRY_CODE';
        ![TEXT_ID]        : String(10)   @title : 'TEXT_ID: TEXT_ID';
        ![LOGTEXT]        : String(1024) @title : 'LOGTEXT: LOGTEXT';
-  };
-}
+  }

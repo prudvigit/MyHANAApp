@@ -12,12 +12,17 @@
     {
       "name": "Admin",
       "description": "generated",
-      "scope-references": ["$XSAPPNAME.Admin"],
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ],
       "attribute-references": []
     }
   ],
   "oauth2-configuration": {
-    "credential-types": ["binding-secret", "x509"],
+    "credential-types": [
+      "binding-secret",
+      "x509"
+    ],
     "redirect-uris": [
       "https://*.applicationstudio.cloud.sap/**",
       "http://localhost:5000/**"
